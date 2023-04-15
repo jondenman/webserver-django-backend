@@ -49,8 +49,8 @@ INSTALLED_APPS = [
     'CardSite.apps.CardsiteConfig',
 ]
 
-# remove for production
-CORS_ORIGIN_ALLOW_ALL = True
+# change for production
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
