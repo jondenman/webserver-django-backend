@@ -9,3 +9,8 @@ def cards(request):
     data = Product.objects.all()
     serializer = ProductSerializer(data, many=True)
     return JsonResponse({'cards': serializer.data})
+
+def card(request, id):
+    data = Product.objects.get(pk=id)
+    serializer = ProductSerializer(data)
+    return JsonResponse({'card': serializer.data})

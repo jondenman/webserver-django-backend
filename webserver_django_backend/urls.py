@@ -20,5 +20,6 @@ from CardSite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/cards/', views.cards, name='cards')
+    path('api/cards/', views.cards, name='cards'),
+    path('api/cards/<int:id>', views.card, name='card')
 ]
